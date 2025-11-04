@@ -205,6 +205,7 @@ let eventListeners = () => {
   // Restart Button
   restartButton.addEventListener('click', () => {
     game.state = "startScreen";
+    game.previousState = "startScreen";
     player2.centerY = game.canvasMidY;
     pauseContainer.style.display = "none";
   });
@@ -232,7 +233,12 @@ let eventListeners = () => {
         setTimeout(function() {
           ball.angle = Math.random() < 0.5 ? -60 : -120;
           ball.speed = game.ballSpeed;
-          game.state = "playing";
+          // don't start if paused
+          if (game.state === "pause") {
+            game.previousState = "playing";
+          } else {
+            game.state = "playing";
+          }
         }, player2.serveTime);
       }
     });
