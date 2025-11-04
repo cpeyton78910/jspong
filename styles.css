@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #111;
+  height: 100%;
+  width: 100%;
+  touch-action: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.gameContainer {
+  width: 500px;
+  height: 400px;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  font-family: 'Orbitron', sans-serif;
+  padding: 0;
+}
+
+#gameCanvas {
+  background: #000;
+  margin: 0 auto;
+  display: block;
+  width: 500px;
+  height: 400px;
+  z-index: 1;
+}
+
+#menuButton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  line-height: 25%;
+  font-weight: 100;
+  background: transparent;
+  border: none;
+  color: #ffffff55;
+  width: min-content;
+  height: min-content;
+  font-size: 1.5rem;
+  display: none;
+  padding-bottom: 20px;
+  padding-left: 10px;
+}
+
+#menuButton:hover {
+  color: #ffffff88;
+}
+
+.gameContainer button {
+  width: 10rem;
+  height: 2rem;
+  border-radius: .5rem;
+  color: #fff;
+  background-color: #000;
+  border: 2px solid #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  z-index: 999;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.gameContainer button:hover {
+  background-color: #222;
+  cursor: pointer;
+}
+
+#pauseContainer, #difficultyContainer {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  width: min-content;
+}
