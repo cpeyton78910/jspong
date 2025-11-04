@@ -6,6 +6,7 @@ html, body {
   background: #111;
   height: 100%;
   width: 100%;
+  overflow: hidden;
   touch-action: none;
   -webkit-user-select: none;
   -ms-user-select: none;
