@@ -259,8 +259,11 @@ let eventListeners = () => {
   // Responsive Scaling
   function scaleCanvas() {
 
-    const scaleX = window.innerWidth / canvas.width;
-    const scaleY = window.innerHeight / canvas.height;
+    const windowWidth = document.body.clientWidth;
+    const windowHeight = document.body.clientHeight;
+
+    const scaleX = windowWidth / canvas.width;
+    const scaleY = windowHeight / canvas.height;
 
     scale = Math.min(scaleX, scaleY);
 
@@ -270,8 +273,8 @@ let eventListeners = () => {
 
     // center it on screen
     gameContainer.style.position = 'absolute';
-    gameContainer.style.left = `${(window.innerWidth - canvas.width * scale) / 2}px`;
-    gameContainer.style.top = `${(window.innerHeight - canvas.height * scale) / 2}px`;
+    gameContainer.style.left = `${(windowWidth - canvas.width * scale) / 2}px`;
+    gameContainer.style.top = `${(windowHeight - canvas.height * scale) / 2}px`;
   }
 
   window.addEventListener('resize', scaleCanvas);
